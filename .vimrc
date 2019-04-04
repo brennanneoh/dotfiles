@@ -17,6 +17,11 @@ if dein#load_state('~/.cache/dein')
   call dein#add('morhetz/gruvbox')
   call dein#add('tpope/vim-fugitive')
   call dein#add('ntpeters/vim-better-whitespace')
+  call dein#add('jremmen/vim-ripgrep')
+  call dein#add('sheerun/vim-polyglot')
+  call dein#add('vim-scripts/BufOnly.vim')
+  call dein#add('terryma/vim-multiple-cursors')
+  call dein#add('godlygeek/tabular')
 
   call dein#end()
   call dein#save_state()
@@ -31,6 +36,8 @@ let g:python3_host_prog = "/usr/local/bin/python3"
 let g:deoplete#enable_at_startup = 1
 let g:strip_whitespace_on_save = 1
 let g:strip_whitelines_at_eof=1
+let g:current_line_whitespace_disabled_soft=1
+let NERDTreeIgnore = ['\.pyc$']
 
 set macligatures
 set splitright
@@ -42,6 +49,7 @@ set shiftwidth=2 tabstop=2 expandtab
 set incsearch
 set hlsearch
 set colorcolumn=100
+set nofixendofline
 
 nmap <Leader>nf :NERDTreeFind<cr>
 nnoremap <Leader><space> :noh<cr>
